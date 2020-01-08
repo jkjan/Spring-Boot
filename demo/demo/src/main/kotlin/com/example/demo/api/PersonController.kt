@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*
 import java.util.*
 import javax.validation.Valid
 
-@RequestMapping("api/v1/person")
+@RequestMapping("clover")
 @RestController
 class PersonController(private val personService: PersonService) {
     @PostMapping
@@ -30,4 +30,7 @@ class PersonController(private val personService: PersonService) {
     fun updatePerson(@PathVariable("id") id : UUID, @Valid @NotNull @RequestBody person : Person) {
         personService.updatePerson(id, person)
     }
+
+    @RequestMapping(path = ["/"])
+    fun hello() = "Hello World!"
 }
