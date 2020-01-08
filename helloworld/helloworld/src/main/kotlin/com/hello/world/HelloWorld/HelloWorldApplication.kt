@@ -1,11 +1,11 @@
-package com.example.helloworld
+package com.hello.world.HelloWorld
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class HelloworldApplication
+class HelloWorldApplication
 
 fun main(args: Array<String>) {
-	runApplication<HelloworldApplication>(*args)
+	runApplication<HelloWorldApplication>(*args)
 }
