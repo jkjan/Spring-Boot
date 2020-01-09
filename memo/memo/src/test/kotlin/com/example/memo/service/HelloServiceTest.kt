@@ -1,4 +1,4 @@
-package com.example.memo
+package com.example.memo.service
 
 import com.example.memo.entity.Hello
 import com.example.memo.repository.HelloRepository
