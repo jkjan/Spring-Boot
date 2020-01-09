@@ -10,8 +10,8 @@ import java.lang.System.currentTimeMillis
 @Aspect
 @Component
 class HelloAspect {
-    @Around(value = "execution(* com.example.memo.service.HelloService.*(..)) and args(hello)")
-    fun beforeAdvice(pjp : ProceedingJoinPoint, hello : Hello) {
+    @Around(value = "execution(* com.example.memo.service.HelloService.createHello(..)) and args(hello)")
+    fun aroundAdvice(pjp : ProceedingJoinPoint, hello : Hello) {
         println("Start creating a hello of ${hello.id} with ${hello.point}")
         val tik = currentTimeMillis()
         try {
