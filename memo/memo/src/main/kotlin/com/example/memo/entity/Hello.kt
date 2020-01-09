@@ -1,6 +1,5 @@
 package com.example.memo.entity
 
-import org.hibernate.annotations.GenericGenerator
 import javax.persistence.*
 
 @Entity

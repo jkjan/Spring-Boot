@@ -15,11 +15,10 @@ import org.junit.jupiter.api.Assertions.assertEquals
 class DemoApplicationTests(@Autowired private val helloRepository: HelloRepository) {
 	@Test
 	fun createTest() {
-		val hello = Hello("jkjan", 100)
+		val hello = Hello("hello", 100)
 		helloRepository.save(hello)
-		val helloList = helloRepository.findAll()
-		val one = helloList[0]
-		assertEquals(one.point, 100)
+		val test = helloRepository.findAll()[0]
+		assertEquals(test.point, 100)
 	}
 
 	@Test

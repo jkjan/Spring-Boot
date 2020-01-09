@@ -17,10 +17,10 @@ class HelloController(private val helloService: HelloService) {
     }
 
     @GetMapping(path = ["/"])
-    fun readHello(): MutableList<Hello> = helloService.readHello()
+    fun readHello(): List<Hello> = helloService.readHello()
 
-    @PutMapping(path = ["{id}"])
-    fun updateHello(@PathVariable("id") hello: Hello) {
+    @PutMapping(path = ["/{id}"])
+    fun updateHello(@PathVariable("id") id : String, @Valid @NotNull @RequestBody hello: Hello) {
         helloService.updateHello(hello)
     }
 
