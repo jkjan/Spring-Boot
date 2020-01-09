@@ -17,8 +17,8 @@ class HelloServiceTest(@Autowired private val helloRepository: HelloRepository) 
     fun createTest() {
         val hello = Hello("hello", 100)
         helloRepository.save(hello)
-        val test = helloRepository.findAll()[0]
-        assertEquals(test.point, 100)
+        val test = helloRepository.findById("hello")
+        assertEquals(test.get().point, 100)
     }
 
     @Test
