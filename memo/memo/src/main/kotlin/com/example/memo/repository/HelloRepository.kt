@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface HelloRepository : JpaRepository<Hello, String> {
+    fun findByPointGreaterThan(point : Int) : List<Hello>
 }

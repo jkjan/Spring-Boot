@@ -11,4 +11,5 @@ class HelloService(private val helloRepository: HelloRepository) {
     fun updateHello(hello: Hello) = helloRepository.save(hello)
     fun deleteHello (id : String) = helloRepository.deleteById(id)
     fun deleteAllHello() = helloRepository.deleteAll()
+    fun findRicherThan(point : Int) = helloRepository.findByPointGreaterThan(point)
 }

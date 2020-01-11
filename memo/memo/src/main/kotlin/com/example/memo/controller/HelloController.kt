@@ -33,4 +33,7 @@ class HelloController(private val helloService: HelloService) {
     fun deleteAllHello() {
         helloService.deleteAllHello()
     }
+
+    @GetMapping(path = ["/{point}"])
+    fun findRicherThan(@PathVariable("point") point : Int) = helloService.findRicherThan(point)
 }
